@@ -1,0 +1,334 @@
+/* Setting styles*/
+* {
+  box-sizing: border-box;
+}
+
+.textPreset1 {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 120%;
+  letter-spacing: 0px;
+}
+
+.textPreset2 {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: 0px;
+}
+
+.textPreset3 {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 120%;
+  letter-spacing: 0;
+}
+
+.textPreset4 {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 120%;
+}
+
+.textPreset5 {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0px;
+  opacity: 0.7;
+}
+
+.textPreset6 {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0;
+  opacity: 0.7;
+}
+
+.textPreset7 {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0px;
+}
+
+
+/*Heading*/
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  height: 59px;
+  width: 100%;
+  display:flex;
+  height: 107px;
+}
+
+.nav {
+  display:flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 125px 0px 8%;
+
+}
+
+.nav img {
+  height: 28px;
+  padding: 12px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.nav p {
+  padding: 16px 32px;
+  margin: 0px;
+  background-color: #13183f;
+  color: white;
+  border-radius: 30px;
+}
+
+.nav p:hover {
+  opacity: 0.5;
+}
+/*Body*/
+.getStartedContainer {
+  width: 33%;
+  height: auto;
+  margin: 180px 8%;
+}
+
+.bannerContainer {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  overflow: hidden; 
+  width: 100%;
+  height: 938px;
+  z-index: -1;
+}
+
+#desktopBanner {
+  position: absolute;
+  right: -350px;
+  top: -150px;
+}
+
+#phoneBanner1 {
+  display: none;
+}
+
+.middleButton {
+  background-color: grey;
+  width: fit-content;
+  padding: 16px 32px;
+  border-radius: 30px;
+  background-image: linear-gradient(hsla(13, 100%, 64%, 100%), hsla(322, 87%, 55%, 100%));
+  color: white;
+}
+
+.middleButton:hover {
+  opacity: 0.5;
+}
+
+/*Courses*/
+.coursesContainer {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 0px;
+  padding: 0px 0px;
+  flex-wrap: wrap;
+  margin: 8%;
+}
+
+.course {
+  position: relative;
+  max-width: 352px;
+  max-height: 322px;
+  border-radius: 15px;
+  background-color: white;
+  padding: 64px 32px;
+  box-shadow:20px 20px 50px grey;
+  text-align: top; 
+}
+
+.course p {
+  margin-top: 0px
+}
+
+#callout {
+  background-image: linear-gradient(#ff6f48, #f02aa6);
+  color: white;
+
+}
+
+.smallButton {
+  color: #f74780;
+  position: absolute;
+  bottom: 20px;
+}
+
+.smallButton:hover {
+  opacity: 0.5;
+}
+
+.icon {
+  position: absolute;
+  top: -23px;
+}
+
+/*footer*/
+footer {
+  height: 107px;
+  background-color: #13183f;
+}
+
+#bottomButton {
+  width: fit-content;
+  padding: 16px 32px;
+  border-radius: 30px;
+  background-image: linear-gradient(#4851ff, #f02AA6);
+  color: white;
+}
+
+#footer {
+  position: relative;
+  bottom: 0px;
+}
+
+/*Items hidden until responsive design initiated*/
+#tabletBanner1 {
+  position: absolute;
+  right: -275px;
+  top: -100px;
+  display: none;
+}
+
+/*Begin responsive design - break point at 1100px, banner overflows greeting text*/
+
+@media only screen and (max-width: 1100px) {
+  .textPreset1 {
+    font-size: 40px;
+    line-height: 120%;
+  }
+  
+  .textPreset4 {
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  #desktopBanner {
+    display: none;
+  }
+
+
+  /*showing content*/
+  #tabletBanner1 {
+    display: block;
+  }
+
+  /*changing content*/
+  .getStartedContainer {
+    width: 43.5%;
+    margin: 105px 8%;
+  }
+
+  .coursesContainer {
+    margin: 4%;
+    gap: 24px;
+  }
+
+  .course{
+    width: 328px;
+    height: 322px;
+  }
+}
+
+/*Second natural break point, graphic overlap text, begin phone transition*/
+@media only screen and (max-width: 740px) {
+  #tabletBanner1 {
+    display: none;
+  }
+  
+  .nav {
+    height: 91px;
+    margin: 0px;
+    padding: 20px;
+  }
+
+  .nav img {
+    width: 25%;
+    height: auto;
+  }
+
+    .getStartedContainer {
+      width: fit-content;
+      padding: 32px 20px 0px 32px;
+      margin: 0px;
+    }
+
+    .textPreset1 {
+      font-size: 38px;
+    }
+
+    .getStartedContainer h1 {
+      margin-top: 0px;
+      font-size: 36px;
+    }
+
+    .middleButton {
+      padding: 16px 32px;
+      margin-bottom: 0px;
+    }
+
+  .pbContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  #phoneBanner1 {
+    display: block;
+    
+  }
+
+  .textPreset3 {
+    font-size: 24px;
+  }
+
+  .course {
+    margin-bottom: 32px;
+  }
+
+  #callout {
+    height: fit-content; padding: 32px;
+  }
+
+  #callout p {
+    margin-bottom: 0px;
+  }
+
+  footer {
+    height: fit-content;
+  }
+}
+
+
+
+
+
+
